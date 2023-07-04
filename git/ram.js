@@ -1,13 +1,14 @@
 //closures 
 function x(){
-    let a=7;
-  return   function y(){
-        let a=8;
-        console.log(a);
+    var a=7;
+    function y(){
+        //let a=8;
+        console.log(a);//references to vaiable will accessed
     } 
-   //return y; are both same;
+    a=100;
+   return y
 }
 var z=x();
 console.log(z);
 //suppose thound of lines
-z();
+z();//output is 100 cause the closure giving because the final reference of a points 100;
